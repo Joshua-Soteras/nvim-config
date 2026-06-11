@@ -20,9 +20,10 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Open a terminal in a horizontal split at the bottom
+-- Open a terminal in a horizontal split at the bottom (25% height)
 vim.keymap.set('n', '<leader>st', function()
   vim.cmd.split()
   vim.cmd.term()
   vim.cmd.wincmd 'J'
+  vim.cmd('resize ' .. math.floor(vim.o.lines * 0.25))
 end, { desc = '[S]plit [T]erminal' })
