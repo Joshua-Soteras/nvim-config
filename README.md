@@ -35,10 +35,12 @@ Install these before cloning.
 
 ### 1. Neovim (v0.10 or later)
 
-Check your version with:
+If you already have Neovim, check your version:
 ```bash
 nvim --version
 ```
+
+If it says `v0.10` or higher you are good — skip to step 2. If it is older or not installed, install it below.
 
 **macOS:**
 ```bash
